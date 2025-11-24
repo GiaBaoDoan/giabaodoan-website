@@ -40,6 +40,7 @@ export default function Home() {
       <HeroSection />
       <WhyMe />
       <OurProjects />
+      <FeedBack />
       <OurServices />
       <section className="container mx-auto px-4 md:px-16 relative">
         <div className="mx-auto p-4 md:p-20 text-center border-t-2 border-l-2 border-b-2 rounded-xl">
