@@ -17,7 +17,7 @@ const AboutMe = () => {
             className="w-80 h-80 rounded-full flex items-center justify-center mx-auto shadow-2xl overflow-hidden"
           >
             <Image
-              src="/Avatar-DepTrai.wepb"
+              src="/avatar.jpg"
               alt="Đoàn Gia Bảo - Founder & CEO Gia Bảo Digital"
               width={320}
               height={320}
