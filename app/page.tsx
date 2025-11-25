@@ -1,3 +1,5 @@
+"use client";
+
 import { Contact } from "@/components/contact";
 
 import {
@@ -5,11 +7,12 @@ import {
   OurProjects,
   OurServices,
   FeedBack,
-  WhyMe,
 } from "@/components/home";
+import WhyChooseUs from "@/components/home/WhyMe";
 
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,30 +20,63 @@ export default function Home() {
     <div>
       <section className="py-12">
         <div className="px-4 md:px-16">
-          <div className="flex items-center justify-center flex-col gap-6">
-            <RainbowButton className="bg-white rounded-full text-black capitalize">
-              🎉 Chào mừng đến với Gia Bảo Digital
-            </RainbowButton>
-            <h1 className="text-2xl text-center font-bold md:text-4xl leading-tight tracking-tighter md:leading-[1.1]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="flex items-center justify-center flex-col gap-6"
+          >
+            {/* Button intro */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <RainbowButton className="bg-white rounded-full text-black capitalize">
+                🎉 Chào mừng đến với Gia Bảo Digital
+              </RainbowButton>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.5 }}
+              className="text-2xl text-center font-bold md:text-4xl leading-tight tracking-tighter md:leading-[1.1]"
+            >
               <p className="bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
                 Thiết Kế & Lập Trình Website Chuyên Nghiệp
               </p>
-            </h1>
-            <p className="max-w-[1050px] text-center text-lg sm:text-xl">
+            </motion.h1>
+
+            {/* Sub text */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="max-w-[1050px] text-center text-lg sm:text-xl"
+            >
               Chúng tôi mang đến giải pháp website hoàn hảo, giúp bạn tăng doanh
               thu, nâng tầm thương hiệu với tốc độ tải nhanh, giao diện độc
-              quyền &amp; chuẩn SEO!
-            </p>
-            <InteractiveHoverButton className="mt-6">
-              Nhận báo giá miễn phí
-            </InteractiveHoverButton>
-          </div>
+              quyền & chuẩn SEO!
+            </motion.p>
+
+            {/* CTA button */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.65, duration: 0.5 }}
+            >
+              <InteractiveHoverButton className="mt-6">
+                Nhận báo giá miễn phí
+              </InteractiveHoverButton>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
       <HeroSection />
-      <WhyMe />
+      <WhyChooseUs />
       <OurProjects />
-      <FeedBack />
       <OurServices />
       <section className="container mx-auto px-4 md:px-16 relative">
         <div className="mx-auto p-4 md:p-20 text-center border-t-2 border-l-2 border-b-2 rounded-xl">
