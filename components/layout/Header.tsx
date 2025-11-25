@@ -160,7 +160,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <div className="flex gap-3">
+                        <Link href='/dich-vu-bao-tri-website-tai-ho-chi-minh' className="flex gap-3">
                           <Button variant="outline">
                             <ShieldCheck />
                           </Button>
@@ -172,10 +172,10 @@ const Header = () => {
                               Update, backup, bảo mật, tăng tốc website
                             </p>
                           </div>
-                        </div>
+                        </Link>
                       </li>
                       <li>
-                        <div className="flex gap-3">
+                        <Link href='/ui-ux-design' className="flex gap-3">
                           <Button variant="outline">
                             <Layout />
                           </Button>
@@ -188,7 +188,7 @@ const Header = () => {
                               dùng (UX)
                             </p>
                           </div>
-                        </div>
+                        </Link>
                       </li>
                     </ul>
                   </div>

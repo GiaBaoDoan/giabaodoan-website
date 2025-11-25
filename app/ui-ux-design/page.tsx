@@ -20,7 +20,7 @@ import {
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
-} from "@/components/ui/accordion"; // đường dẫn component Accordion của bạn
+} from "@/components/ui/accordion";
 
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Button } from "@/components/ui/button";
