@@ -17,7 +17,7 @@ const AboutMe = () => {
             className="w-80 h-80 rounded-full flex items-center justify-center mx-auto shadow-2xl overflow-hidden"
           >
             <Image
-              src="https://tanphatdigital.com/_next/static/media/tanphat.36c71797.webp"
+              src="/Avatar-DepTrai.wepb"
               alt="Đoàn Gia Bảo - Founder & CEO Gia Bảo Digital"
               width={320}
               height={320}
