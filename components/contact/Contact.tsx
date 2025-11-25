@@ -1,3 +1,5 @@
+'use client'
+
 import ContactForm from "@/components/contact/ContactForm";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import { Mail, MapPin, Phone } from "lucide-react";
