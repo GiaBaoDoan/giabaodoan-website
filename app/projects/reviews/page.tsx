@@ -1,7 +1,6 @@
 "use client";
 import FeedBack from "@/components/share/FeedBack";
 import { motion } from "framer-motion";
-import { designWebDataPage } from "@/data/services/web-design";
 import { Brain, Brush, Check, Layers, Quote, Search, Shield, Star, TrendingUp, Tv2, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";

@@ -20,7 +20,7 @@ import { motion } from 'framer-motion'
 
 const data = [
   {
-    href: "/",
+    href: "/solutions/website-doanh-nghiep",
     icon: <Briefcase className="w-6 h-6" />,
     title: "Website Doanh Nghiệp",
     status: "new",
@@ -43,6 +43,7 @@ const data = [
     features: [
       "Xử lý 10K+ đơn/ngày",
       "Thanh toán đa kênh",
+      "Thanh toán đa kênh",
       "Inventory real-time",
       "Multi-vendor",
       "Analytics dashboard",
@@ -57,6 +58,7 @@ const data = [
     desc: "Single Page Application (SPA) với hiệu suất cao và conversion tracking",
     features: [
       "Conversion rate > 15%",
+      "A/B testing tự động",
       "A/B testing tự động",
       "Lead scoring AI",
       "Pixel tracking",
@@ -171,7 +173,7 @@ const data = [
   },
 ];
 
-const page = () => {
+const SolutionPage = () => {
   return (
     <div>
       {/* Header */}
@@ -215,9 +217,8 @@ const page = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.03 }}
             >
-              <div className="hover:border-white hover:bg-card rounded-lg shadow-sm border transition-all">
+              <div className="hover:border-white rounded-lg shadow-sm border transition-all">
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center gap-3 mb-4">
@@ -264,4 +265,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SolutionPage;
