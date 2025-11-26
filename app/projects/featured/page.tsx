@@ -266,48 +266,46 @@ const page = () => {
                         </motion.div>
                     ))}
                 </div>
-
+                <motion.div
+                    className="mt-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <motion.h2
+                        className="text-2xl md:text-3xl font-bold mb-4"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                    >
+                        Bạn Muốn Có Một Dự Án Tương Tự?
+                    </motion.h2>
+                    <motion.p
+                        className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        Liên hệ với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết cho dự án của bạn.
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                        <Link href='/contact' className="flex justify-center">
+                            <InteractiveHoverButton>
+                                Liên hệ ngay
+                            </InteractiveHoverButton>
+                        </Link>
+                    </motion.div>
+                </motion.div>
 
             </div>
-
-            <motion.div
-                className="mt-16 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-            >
-                <motion.h2
-                    className="text-2xl md:text-3xl font-bold mb-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                    Bạn Muốn Có Một Dự Án Tương Tự?
-                </motion.h2>
-                <motion.p
-                    className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    Liên hệ với chúng tôi để được tư vấn miễn phí và nhận báo giá chi tiết cho dự án của bạn.
-                </motion.p>
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                    <Link href='/contact' className="flex justify-center">
-                        <InteractiveHoverButton>
-                            Liên hệ ngay
-                        </InteractiveHoverButton>
-                    </Link>
-                </motion.div>
-            </motion.div>
 
         </section>
     )
