@@ -1,6 +1,9 @@
+'use client'
+
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import { ArrowRight, Calendar, CheckSquare, CircleCheck, CircleCheckBig, Code, FileText, FlaskConical, GitBranch, LucideIcon, MessageSquare, Palette, Rocket, Search, Settings, Shield, Target, TrendingUp, Wrench, Zap } from "lucide-react"
+import { ArrowRight, Calendar, CircleCheck, CircleCheckBig, Code, FileText, FlaskConical, GitBranch, LucideIcon, MessageSquare, Palette, Rocket, Search, Settings, Shield, Target, TrendingUp, Wrench, Zap } from "lucide-react"
 import Link from "next/link";
+import { motion } from 'framer-motion'
 
 const data = [
     {
@@ -150,35 +153,65 @@ const page = () => {
         <div>
             <section className="py-16 md:py-24">
                 <div className="container px-4 md:px-16">
-                    <div className="text-center mb-12"><h1 className="text-3xl md:text-4xl font-bold mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
-                        Quy Trình Làm Việc</h1><p className="text-lg text-gray-300 max-w-3xl mx-auto">Quy trình phát triển phần mềm chuẩn quốc tế, đảm bảo chất lượng và tiến độ dự án</p></div>
+                    <motion.div
+                        className="text-center mb-12"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                    >
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
+                            Quy Trình Làm Việc
+                        </h1>
+                        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                            Quy trình phát triển phần mềm chuẩn quốc tế, đảm bảo chất lượng và tiến độ dự án
+                        </p>
+                    </motion.div>
                 </div>
             </section>
             <section className="py-16 px-4">
                 <div className="container mx-auto px-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16" >7 Bước Quy Trình Chuyên Nghiệp</h2>
+
+                    {/* TITLE ANIMATION */}
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-4xl font-bold text-center mb-16"
+                    >
+                        7 Bước Quy Trình Chuyên Nghiệp
+                    </motion.h2>
+
                     <div className="space-y-8">
-                        {data.map((step) => (
-                            <div
+                        {data.map((step, idx) => (
+                            <motion.div
                                 key={step.id}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                                viewport={{ once: true }}
                                 className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex flex-col space-y-1.5 p-4">
-                                    {/* HEADER */}
                                     <div className="flex items-start gap-6">
                                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                                             {step.icon}
                                         </div>
                                         <div className="flex-1">
                                             <div className="flex items-center gap-4 mb-2">
-                                                <span className="text-2xl font-bold text-primary">{step.id}</span>
+                                                <span className="text-2xl font-bold text-primary">
+                                                    {step.id}
+                                                </span>
                                                 <ArrowRight className="h-5 w-5 text-primary" />
                                                 <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-primary border-primary">
                                                     <Calendar className="h-3 w-3 mr-1" /> {step.duration}
                                                 </div>
                                             </div>
 
-                                            <div className="font-semibold tracking-tight text-xl mb-2">{step.title}</div>
+                                            <div className="font-semibold tracking-tight text-xl mb-2">
+                                                {step.title}
+                                            </div>
                                             <p className="text-sm mb-4">{step.subtitle}</p>
                                             <p>{step.description}</p>
                                         </div>
@@ -188,12 +221,11 @@ const page = () => {
                                 {/* DETAILS */}
                                 <div className="p-4 pt-0">
                                     <div className="grid md:grid-cols-2 gap-8">
-                                        {/* Hoạt động chính */}
                                         <div>
                                             <h4 className="font-semibold mb-3 text-primary">Hoạt động chính:</h4>
                                             <ul className="space-y-2">
-                                                {step.activities.map((act, idx) => (
-                                                    <li key={idx} className="flex items-start gap-2">
+                                                {step.activities.map((act, idx2) => (
+                                                    <li key={idx2} className="flex items-start gap-2">
                                                         <CircleCheckBig className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                                                         {act}
                                                     </li>
@@ -201,12 +233,11 @@ const page = () => {
                                             </ul>
                                         </div>
 
-                                        {/* Deliverables */}
                                         <div>
                                             <h4 className="font-semibold mb-3 text-primary">Deliverables:</h4>
                                             <ul className="space-y-2">
-                                                {step.deliverables.map((item, idx) => (
-                                                    <li key={idx} className="flex items-start gap-2">
+                                                {step.deliverables.map((item, idx3) => (
+                                                    <li key={idx3} className="flex items-start gap-2">
                                                         <Target className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                                                         {item}
                                                     </li>
@@ -215,67 +246,19 @@ const page = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
             <section className="py-20">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">Phương Pháp Luận Áp Dụng</h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            {
-                                title: "Agile/Scrum",
-                                description: "Phát triển linh hoạt với sprint 2 tuần",
-                                icon: Zap,
-                            },
-                            {
-                                title: "DevOps",
-                                description: "CI/CD pipeline tự động hóa",
-                                icon: Settings,
-                            },
-                            {
-                                title: "Code Review",
-                                description: "Review code nghiêm ngặt trước merge",
-                                icon: CheckSquare,
-                            },
-                            {
-                                title: "Version Control",
-                                description: "Git workflow với branch protection",
-                                icon: GitBranch,
-                            },
-                        ].map((item, idx) => {
-                            const Icon = item.icon;
-                            return (
-                                <div
-                                    key={idx}
-                                    className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full hover:shadow-lg transition-shadow"
-                                >
-                                    <div className="flex flex-col space-y-1.5 p-4">
-                                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                                            <Icon className="h-6 w-6 text-primary" />
-                                        </div>
-                                        <div className="text-2xl font-semibold leading-none tracking-tight">
-                                            {item.title}
-                                        </div>
-                                    </div>
-                                    <div className="p-4 pt-0">
-                                        <p>{item.description}</p>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-            <section className="py-20">
-                <div className="container mx-auto px-4">
                     <div className="mb-16 text-center">
-                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">Tiêu Chuẩn Chất Lượng</h2>
+                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                            Tiêu Chuẩn Chất Lượng
+                        </h2>
                     </div>
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             {
@@ -319,20 +302,27 @@ const page = () => {
                                 ],
                             },
                         ].map((feature, idx) => {
-                            const Icon = feature.icon as LucideIcon;
+                            const Icon = feature.icon;
+
                             return (
-                                <div
+                                <motion.div
                                     key={idx}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: idx * 0.15 }}
+                                    viewport={{ once: true }}
                                     className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full hover:shadow-lg transition-shadow"
                                 >
                                     <div className="flex flex-col space-y-1.5 p-4">
                                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                                             <Icon className="h-6 w-6 text-primary" />
                                         </div>
+
                                         <div className="text-2xl font-semibold leading-none tracking-tight">
                                             {feature.title}
                                         </div>
                                     </div>
+
                                     <div className="p-4 pt-0">
                                         <ul className="space-y-2">
                                             {feature.items.map((item, id) => (
@@ -343,17 +333,18 @@ const page = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>
                 </div>
-
             </section>
             <section className="py-20">
                 <div className="container mx-auto px-4">
                     <div className="mb-16 text-center">
-                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">Giao Tiếp & Báo Cáo</h2>
+                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                            Giao Tiếp & Báo Cáo
+                        </h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
@@ -367,7 +358,7 @@ const page = () => {
                                 title: "Sprint Planning",
                                 description: "Demo sản phẩm và nhận feedback từ stakeholders",
                                 time: "Mỗi thứ 2 10:00 AM",
-                                icon: Calendar, // đổi icon khác nếu muốn
+                                icon: Calendar,
                             },
                             {
                                 title: "Retrospective",
@@ -378,8 +369,12 @@ const page = () => {
                         ].map((item, idx) => {
                             const Icon = item.icon;
                             return (
-                                <div
+                                <motion.div
                                     key={idx}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: idx * 0.05 }}
+                                    viewport={{ once: true }}
                                     className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full hover:shadow-lg transition-shadow text-center"
                                 >
                                     <div className="flex flex-col space-y-1.5 p-4">
@@ -396,33 +391,43 @@ const page = () => {
                                             {item.time}
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>
                 </div>
-
             </section>
+
             <section className="pt-20">
                 <div className="container mx-auto px-4">
                     <div className="mx-auto text-center">
-                        <div className="p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-white">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-white"
+                        >
                             <h2 className="text-2xl font-bold md:text-4xl mb-2 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent not-italic">
                                 Hợp tác ngay với Gia Bảo Digital
                             </h2>
                             <p className="text-lg mb-8 mx-auto">
                                 Chúng tôi không chỉ thiết kế website, mà còn giúp doanh nghiệp xây dựng thương hiệu số mạnh mẽ. Cung cấp dịch vụ thiết kế website trọn gói từ thiết kế đến tối ưu SEO. Hãy liên hệ ngay với Gia Bảo Digital để cùng tạo nên những giải pháp công nghệ đột phá, hiệu quả và bền vững cho doanh nghiệp của bạn tại Hồ Chí Minh
                             </p>
-                            <div>
+                            <div className="inline-block mt-6">
                                 <Link href="/contact">
-                                    <div className="group inline-block mt-6">
+                                    <motion.div
+                                        whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0,0,0,0.3)" }}
+                                        transition={{ type: "spring", stiffness: 300 }}
+                                        className="group inline-block"
+                                    >
                                         <InteractiveHoverButton>
                                             <span className="relative z-10">Liên Hệ Ngay</span>
                                         </InteractiveHoverButton>
-                                    </div>
+                                    </motion.div>
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

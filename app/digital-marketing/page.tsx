@@ -12,6 +12,13 @@ import {
     Check,
     CircleCheck,
     CircleCheckBig,
+    Brush,
+    Search,
+    Layers,
+    Users,
+    Tv2,
+    TrendingUp,
+    Brain,
 } from "lucide-react";
 import OurProjects from "@/components/share/Projects";
 
@@ -30,7 +37,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { designWebDataPage } from "@/data/services/web-design";
 
-const page = () => {
+const DigitalMarketingPage = () => {
     return (
         <div className="min-h-screen overflow-y-hidden">
             {/* Tiêu đề Trang  */}
@@ -416,52 +423,90 @@ const page = () => {
                 </div>
             </section>
             {/* Tại sao lại lựa chọn gia bảo */}
-            <section className="py-16" id="tai-sao-chon-chung-toi">
+            <section className="py-16">
                 <div className="container mx-auto px-4">
-                    <motion.div
-                        className="text-center mb-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <h2 className="text-2xl font-bold md:text-4xl mb-4">
-                            🏆
-                            <span className="bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
-                                Tại sao khách hàng tin tưởng Gia Bảo Digital?
-                            </span>
-                        </h2>
-                        <p className="text-lg mx-auto">
-                            Chúng tôi không chỉ thiết kế website, mà còn giúp doanh nghiệp xây
-                            dựng thương hiệu số mạnh mẽ
-                        </p>
-                    </motion.div>
-
+                    <h1 className="text-2xl font-bold md:text-4xl mb-12 text-center ">
+                        🎯
+                        <span className="bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                            Tại sao khách hàng tin tưởng Gia Bảo Digital?
+                        </span>
+                    </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {designWebDataPage.advantages.map(({ icon: Icon, title, desc }, idx) => (
-                            <motion.div
-                                key={idx}
-                                className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full hover:shadow-xl transition-shadow duration-300"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            >
-                                <div className="flex flex-col space-y-1.5 p-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-12 h-12 rounded-full flex items-center justify-center">
-                                            {Icon}
-                                        </div>
-                                        <div className="tracking-tight text-lg font-semibold">
-                                            {title}
+                        {[
+                            {
+                                title: "Thiết Kế Độc Quyền, Không Dùng Template Có Sẵn",
+                                desc: "Mỗi website được thiết kế riêng, phù hợp với ngành nghề & thương hiệu của bạn.",
+                                icon: Brush,
+                            },
+                            {
+                                title: "Website Chuẩn SEO – Dễ Dàng Lên Top Google",
+                                desc: "Tối ưu tốc độ, nội dung, UI/UX, meta tags, sitemap, backlink… giúp website đạt thứ hạng cao trên Google.",
+                                icon: Search,
+                            },
+                            {
+                                title: "Tối Ưu Tốc Độ – Tải Trang Dưới 3 Giây",
+                                desc: "Sử dụng công nghệ mới nhất Next.js, Tailwind CSS, CDN, Caching… để tăng tốc load web, giúp giữ chân khách hàng.",
+                                icon: Zap,
+                            },
+                            {
+                                title: "Bảo Mật Cao – Đảm Bảo An Toàn Tuyệt Đối",
+                                desc: "Tích hợp SSL, chống DDoS, bảo vệ dữ liệu khách hàng, giúp website an toàn trước mọi rủi ro.",
+                                icon: Shield,
+                            },
+                            {
+                                title: "Hỗ Trợ Lâu Dài – Update & Nâng Cấp Dễ Dàng",
+                                desc: "Bảo trì website, cập nhật tính năng mới, tối ưu liên tục giúp website luôn hoạt động mượt mà & hiệu quả.",
+                                icon: Layers,
+                            },
+                            {
+                                title: "Tư Vấn Cá Nhân Hóa – Hiểu Rõ Nhu Cầu Khách Hàng",
+                                desc: "Đội ngũ chuyên gia của chúng tôi lắng nghe và đưa ra giải pháp phù hợp nhất với mục tiêu kinh doanh của bạn.",
+                                icon: Users,
+                            },
+                            {
+                                title: "Tương Thích Đa Nền Tảng – Trải Nghiệm Mượt Mà",
+                                desc: "Website được tối ưu hiển thị hoàn hảo trên mọi thiết bị: PC, tablet, điện thoại, đảm bảo trải nghiệm người dùng tốt nhất.",
+                                icon: Tv2,
+                            },
+                            {
+                                title: "Cam Kết Hiệu Quả – Tăng Chuyển Đổi Doanh Thu",
+                                desc: "Thiết kế tập trung vào hành vi người dùng, kết hợp CTA mạnh mẽ giúp tăng tỷ lệ chuyển đổi và doanh thu.",
+                                icon: TrendingUp,
+                            },
+                            {
+                                title: "Tích Hợp Công Nghệ AI – Thông Minh & Hiện Đại",
+                                desc: "Ứng dụng AI để phân tích dữ liệu người dùng, cá nhân hóa trải nghiệm và tối ưu hiệu suất website.",
+                                icon: Brain,
+                            },
+                        ].map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }} // xuất hiện từ dưới
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                                    whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0,0,0,0.2)" }}
+                                    className="rounded-lg border border-white/10 text-card-foreground shadow-sm h-full transition-all duration-300"
+                                >
+                                    <div className="flex flex-col space-y-1.5 p-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100">
+                                                <Icon className="w-8 h-8" />
+                                            </div>
+                                            <div className="tracking-tight text-lg font-semibold">
+                                                {item.title}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="p-4 pt-0">
-                                    <p>{desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                                    <div className="p-4 pt-0">
+                                        <p>{item.desc}</p>
+                                    </div>
+                                </motion.div>
+
+                            )
+                        })}
+
                     </div>
                 </div>
             </section>
@@ -821,4 +866,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default DigitalMarketingPage;

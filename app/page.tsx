@@ -120,17 +120,17 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-8">
             {[
               {
-                icon: <CircleCheck className="size-11" />,
+                icon: <CircleCheck className="size-10 shrink-0" />,
                 title: "Thiết kế website theo yêu cầu",
                 desc: "Website chuẩn UX/UI, tối ưu SEO, giao diện độc quyền giúp thương hiệu chuyên nghiệp hơn.",
               },
               {
-                icon: <ShieldCheck className="size-11" />,
+                icon: <ShieldCheck className="size-10 shrink-0" />,
                 title: "Chuẩn SEO, chuẩn UI/UX",
                 desc: "Tối ưu SEO & UX giúp tăng chuyển đổi, thu hút khách hàng!",
               },
               {
-                icon: <Clock className="size-11" />,
+                icon: <Clock className="size-10 shrink-0" />,
                 title: "Tốc độ cao & bảo mật",
                 desc: "Website tải nhanh, bảo mật vững chắc chống hacker & tấn công DDoS.",
               },
@@ -166,12 +166,12 @@ export default function Home() {
 
             {[
               {
-                icon: <Edit className="size-11" />,
+                icon: <Edit className="size-10" />,
                 title: "Dễ quản lý & nâng cấp",
                 desc: "Tích hợp CMS mạnh mẽ giúp quản lý nội dung dễ dàng.",
               },
               {
-                icon: <LifeBuoy />,
+                icon: <LifeBuoy className="size-10" />,
                 title: "Hỗ trợ lâu dài",
                 desc: "Bảo trì, cập nhật website miễn phí trọn đời!",
               },
@@ -286,7 +286,6 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                whileHover={{ scale: 1.03 }}
               >
                 <div className="overflow-hidden rounded-lg bg-card text-card-foreground shadow-sm relative border flex flex-col border-zinc-800 hover:border-slate-100 transition-colors">
                   {/* Title */}

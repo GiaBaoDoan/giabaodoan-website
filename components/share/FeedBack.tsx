@@ -86,6 +86,13 @@ const FeedBack = () => {
                   content:
                     "Trang web không chỉ đẹp mà còn giúp khách hàng dễ dàng mua sắm hơn. Nhờ giao diện thân thiện và tốc độ tải nhanh, doanh số của chúng tôi tăng đáng kể trong vài tháng qua.",
                 },
+                {
+                  name: "Đoàn Châu Á",
+                  role: "CEO Start-up",
+                  avatar: "/feedback-03.jpg",
+                  content:
+                    "Trang web không chỉ đẹp mà còn giúp khách hàng dễ dàng mua sắm hơn. Nhờ giao diện thân thiện và tốc độ tải nhanh, doanh số của chúng tôi tăng đáng kể trong vài tháng qua.",
+                },
                 // Thêm item nếu cần
               ].map((t, i) => (
                 <CarouselItem
