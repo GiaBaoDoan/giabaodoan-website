@@ -1,4 +1,5 @@
 "use client";
+
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -54,7 +55,7 @@ export default function AboutPage() {
             Sứ Mệnh Của Chúng Tôi
           </h2>
           <p className="text-lg">
-            Tại Tấn Phát Digital, chúng tôi tin rằng một website không chỉ đơn
+            Tại Gia Bảo Digital, chúng tôi tin rằng một website không chỉ đơn
             thuần là một nền tảng trực tuyến, mà còn là một công cụ chiến lược
             giúp doanh nghiệp mở rộng quy mô, nâng cao thương hiệu và gia tăng
             doanh thu bền vững. Chúng tôi cung cấp dịch vụ thiết kế website trọn
@@ -107,7 +108,7 @@ export default function AboutPage() {
             Sứ Mệnh Của Chúng Tôi
           </h2>
           <p className="text-lg">
-            Tại Tấn Phát Digital, chúng tôi tin rằng một website không chỉ đơn
+            Tại Gia Bảo Digital, chúng tôi tin rằng một website không chỉ đơn
             thuần là một nền tảng trực tuyến, mà còn là một công cụ chiến lược
             giúp doanh nghiệp mở rộng quy mô, nâng cao thương hiệu và gia tăng
             doanh thu bền vững. Chúng tôi cung cấp dịch vụ thiết kế website trọn
@@ -211,12 +212,12 @@ export default function AboutPage() {
       >
         <div className="text-center py-12 rounded-xl border-white border-t-4">
           <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
-            Hợp tác ngay với Tấn Phát Digital
+            Hợp tác ngay với Gia Bảo Digital
           </h2>
           <p className="mt-4">
             Chúng tôi không chỉ thiết kế website, mà còn giúp doanh nghiệp xây
             dựng thương hiệu số mạnh mẽ. Cung cấp dịch vụ thiết kế website trọn
-            gói từ thiết kế đến tối ưu SEO. Hãy liên hệ ngay với Tấn Phát
+            gói từ thiết kế đến tối ưu SEO. Hãy liên hệ ngay với Gia Bảo
             Digital để cùng tạo nên những giải pháp công nghệ đột phá, hiệu quả
             và bền vững cho doanh nghiệp của bạn tại Hồ Chí Minh
           </p>

@@ -13,7 +13,7 @@ import {
     CircleCheck,
     CircleCheckBig,
 } from "lucide-react";
-import { OurProjects } from "@/components/home";
+import OurProjects from "@/components/share/Projects";
 
 import {
     Accordion,

@@ -2,7 +2,6 @@
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/layout";
 import {
   Facebook,
   Instagram,
@@ -12,6 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import Logo from "@/components/share/Logo";
 
 export default function Footer() {
   return (

@@ -1,19 +1,14 @@
 "use client";
 
 import {
-  Zap,
-  Shield,
   Code,
-  Rocket,
   ArrowRight,
-  Database,
   Quote,
   Star,
   Check,
   CircleCheck,
   CircleCheckBig,
 } from "lucide-react";
-import { OurProjects } from "@/components/home";
 
 import {
   Accordion,
@@ -29,6 +24,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { designWebDataPage } from "@/data/services/web-design";
+import OurProjects from "@/components/share/Projects";
 
 const page = () => {
   return (

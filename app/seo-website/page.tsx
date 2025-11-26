@@ -28,7 +28,6 @@ import {
   CircleCheck,
   CircleCheckBig,
 } from "lucide-react";
-import { OurProjects } from "@/components/home";
 
 import {
   Accordion,
@@ -43,6 +42,7 @@ import { NumberTicker } from "@/components/ui/number-ticker";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import OurProjects from "@/components/share/Projects";
 
 const page = () => {
   return (

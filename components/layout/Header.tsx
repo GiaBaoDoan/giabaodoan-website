@@ -1,6 +1,6 @@
 "use client";
 
-import { SearchInput, Logo, MobileMenu } from "@/components/layout";
+
 
 import {
   BrushCleaning,
@@ -27,6 +27,9 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { SignInButton } from "@/components/auth";
+import Logo from "@/components/share/Logo";
+import SearchInput from "@/components/share/SearchInput";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 const Header = () => {
   return (
@@ -204,29 +207,38 @@ const Header = () => {
                       Dự án
                     </h3>
                     <ul className="space-y-4">
-                      <li className="space-x-3 items-center group">
-                        <Button variant="outline">
-                          <Globe />
-                        </Button>
-                        <span className="text-sm">Tất cả dự án</span>
+                      <li >
+                        <Link className="space-x-3 items-center group" href="/projects/featured">
+                          <Button variant="outline">
+                            <Globe />
+                          </Button>
+                          <span className="text-sm">Tất cả dự án</span>
+                        </Link>
                       </li>
-                      <li className="space-x-3 items-center group">
-                        <Button variant="outline">
-                          <Settings />
-                        </Button>
-                        <span className="text-sm">Quy trình làm việc</span>
+                      <li >
+                        <Link className="space-x-3 items-center group" href="/projects/working-proccess">
+                          <Button variant="outline">
+                            <Settings />
+                          </Button>
+                          <span className="text-sm">Quy trình làm việc</span>
+
+                        </Link>
                       </li>
-                      <li className="space-x-3 items-center group">
-                        <Button variant="outline">
-                          <Users />
-                        </Button>
-                        <span className="text-sm">Đánh giá khách hàng</span>
+                      <li >
+                        <Link href="/projects/reviews" className="space-x-3 items-center group">
+                          <Button variant="outline">
+                            <Users />
+                          </Button>
+                          <span className="text-sm">Đánh giá khách hàng</span>
+                        </Link>
                       </li>
-                      <li className="space-x-3 items-center group">
-                        <Button variant="outline">
-                          <LucideRocket />
-                        </Button>
-                        <span className="text-sm">Công nghệ</span>
+                      <li >
+                        <Link href="/projects/technical" className="space-x-3 items-center group">
+                          <Button variant="outline">
+                            <LucideRocket />
+                          </Button>
+                          <span className="text-sm">Công nghệ</span>
+                        </Link>
                       </li>
                     </ul>
                   </div>
