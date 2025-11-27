@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import {
     Brain,
     Brush,
-    Building,
     Building2,
     CircleCheckBig,
     Layers,
@@ -96,7 +95,7 @@ const WebSiteDoanhNghiepPage = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
                             Tại sao doanh nghiệp cần một website chuyên nghiệp?
                         </h2>
                         <p className="text-lg text-center max-w-3xl mx-auto">
@@ -240,7 +239,7 @@ const WebSiteDoanhNghiepPage = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                        <h2 className="text-2xl font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
                             Giải pháp phù hợp cho mọi loại hình doanh nghiệp
                         </h2>
                         <p className="text-lg">
@@ -400,7 +399,7 @@ const WebSiteDoanhNghiepPage = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
                             Tính năng nổi bật giúp doanh nghiệp phát triển bền vững
                         </h2>
                         <p className="text-lg text-center max-w-3xl mx-auto">
@@ -490,7 +489,7 @@ const WebSiteDoanhNghiepPage = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
                             Câu hỏi thường gặp
                         </h2>
                         <p className="text-lg text-center max-w-3xl mx-auto">

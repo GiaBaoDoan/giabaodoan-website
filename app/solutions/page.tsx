@@ -35,7 +35,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/thuong-mai-dien-tu",
     icon: <ShoppingCart className="w-6 h-6" />,
     title: "Nền Tảng Ecommerce",
     status: "popular",
@@ -51,7 +51,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/landing-page",
     icon: <Rocket className="w-6 h-6" />,
     title: "Landing Page Tối Ưu",
     status: "popular",
@@ -67,7 +67,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/dat-lich-online",
     icon: <Calendar className="w-6 h-6" />,
     title: "Hệ Thống Booking",
     status: "new",
@@ -82,7 +82,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/website-spa",
     icon: <Sparkles className="w-6 h-6" />,
     title: "Spa & Salon Platform",
     status: "popular",
@@ -97,7 +97,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/quan-ly-khach-hang",
     icon: <Users className="w-6 h-6" />,
     title: "CRM Enterprise",
     status: "popular",
@@ -112,7 +112,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/quan-ly-phong-kham",
     icon: <Hospital className="w-6 h-6" />,
     title: "Healthcare Management",
     status: "popular",
@@ -127,7 +127,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/ung-dung-mobile",
     icon: <Smartphone className="w-6 h-6" />,
     title: "Mobile Application",
     status: "popular",
@@ -142,7 +142,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/quan-ly-doanh-nghiep",
     icon: <Layers className="w-6 h-6" />,
     title: "ERP Enterprise",
     status: "popular",
@@ -157,7 +157,7 @@ const data = [
     ],
   },
   {
-    href: "/",
+    href: "/solutions/giap-phap-ai",
     icon: <Cpu className="w-6 h-6" />,
     title: "AI & Machine Learning",
     status: "popular",
