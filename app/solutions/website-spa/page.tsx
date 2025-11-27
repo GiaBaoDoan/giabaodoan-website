@@ -1,27 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { NumberTicker } from "@/components/ui/number-ticker";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import {
-    BarChart,
-    CircleCheckBig,
-    Clock,
-    FileText,
-    Hash,
     Megaphone,
-    MousePointerClick,
-    SearchCheck,
-    SearchCode,
-    ServerCog,
     Smartphone,
-    Target,
-    TrendingUp,
-    Smile,
-    Search,
-    Zap,
     LayoutDashboard,
     CalendarCheck,
     CreditCard,
@@ -32,8 +16,6 @@ import {
     BarChart3,
     MessageSquare,
     HeartPulse,
-    BookOpenCheck,
-    Settings2,
     Layers,
     Users,
     Star,
@@ -207,7 +189,7 @@ const WebsiteSpaPage = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <motion.h2
-                            className="text-3xl font-bold md:text-5xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent"
+                            className="text-3xl font-bold md:text-5xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}

@@ -1,25 +1,27 @@
-"use client";
+'use client'
 
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { motion } from "framer-motion";
 import {
-    Smartphone,
-    Users,
+    BarChart3,
+    BarChart4,
+    Briefcase,
+    Building2,
     Check,
-    BarChart2,
-    Shield,
-    FileText,
-    CalendarCheck,
-    Activity,
-    UserCheck,
-    FlaskConical,
-    Hospital,
-    Heart,
+    Factory,
+    Network,
+    ShoppingBag,
+    ShoppingCart,
+    TrendingUp,
+    Users,
+    Wallet,
+    Warehouse,
+    Workflow,
 } from "lucide-react";
 import Link from "next/link";
 
-const QuanLyPhongKhamPage = () => {
+const QuanLyDoanhNghiepPage = () => {
     return (
         <div>
             {/* Tiêu đề trang web */}
@@ -32,12 +34,12 @@ const QuanLyPhongKhamPage = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <h1 className="text-2xl font-bold md:text-4xl mb-2 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
-                            Hệ Thống Quản Lý Phòng Khám & Bệnh Viện (CLS)
-
+                            Hệ Thống ERP Hoạch Định Tài Nguyên Doanh Nghiệp
                         </h1>
                         <p className="text-lg mb-8 mx-auto">
-                            Số Hóa Quy Trình Y Tế - Nâng Cao Chất Lượng Chăm Sóc Sức Khỏe & Quản Lý Hiệu Quả
+                            Tích Hợp Toàn Diện - Tự Động Hóa Quy Trình & Tối Ưu Hiệu Quả Vận Hành
                         </p>
+
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -56,26 +58,10 @@ const QuanLyPhongKhamPage = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         {[
-                            {
-                                label: "Tăng hiệu quả bán hàng",
-                                value: 90,
-                                suffix: "%",
-                            },
-                            {
-                                label: "Tăng tỷ lệ chuyển đổi",
-                                value: 75,
-                                suffix: "%",
-                            },
-                            {
-                                label: "Doanh nghiệp tin dùng",
-                                value: 100,
-                                suffix: "+",
-                            },
-                            {
-                                label: "Tăng doanh thu",
-                                value: 60,
-                                suffix: "%",
-                            }
+                            { label: "Doanh nghiệp triển khai ERP", value: 65, suffix: "%" },
+                            { label: "Tăng hiệu suất vận hành", value: 50, suffix: "%" },
+                            { label: "Giảm sai sót dữ liệu", value: 45, suffix: "%" },
+                            { label: "Tối ưu chi phí vận hành", value: 40, suffix: "%" },
                         ].map((stat, i) => (
                             <motion.div
                                 key={i}
@@ -100,50 +86,38 @@ const QuanLyPhongKhamPage = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
-                            Tại Sao Cần Hệ Thống CLS Chuyên Nghiệp?
+                            Tại Sao Doanh Nghiệp Cần Hệ Thống ERP?
                         </h2>
                         <p className="text-lg text-center max-w-3xl mx-auto">
-                            Tối ưu hóa quy trình y tế, nâng cao chất lượng chăm sóc bệnh nhân và quản lý hiệu quả
+                            Tích hợp và tự động hóa toàn bộ quy trình kinh doanh từ A đến Z
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         {[
                             {
-                                label: "Quản lý hồ sơ bệnh án",
+                                title: "Tích hợp dữ liệu",
                                 description:
-                                    "Số hóa hồ sơ bệnh án, lưu trữ an toàn, truy xuất nhanh chóng, chia sẻ thông tin hiệu quả.",
-                                icon: FileText,
+                                    "Kết nối tất cả phòng ban, loại bỏ silo dữ liệu, thông tin đồng bộ realtime.",
+                                icon: Network,
                             },
                             {
-                                label: "Đặt lịch khám thông minh",
+                                title: "Tự động hóa quy trình",
                                 description:
-                                    "Hệ thống đặt lịch trực tuyến, quản lý lịch bác sĩ, tránh trùng lịch, nhắc nhở tự động.",
-                                icon: CalendarCheck,
+                                    "Giảm công việc thủ công, tăng tốc độ xử lý, giảm thiểu sai sót con người.",
+                                icon: Workflow,
                             },
                             {
-                                label: "Theo dõi sức khỏe",
+                                title: "Báo cáo thông minh",
                                 description:
-                                    "Theo dõi chỉ số sức khỏe, lịch sử khám bệnh, kết quả xét nghiệm, đơn thuốc điện tử.",
-                                icon: Activity,
+                                    "Dashboard realtime, báo cáo tự động, phân tích dữ liệu để ra quyết định.",
+                                icon: BarChart3,
                             },
                             {
-                                label: "Bảo mật thông tin",
+                                title: "Tăng hiệu quả",
                                 description:
-                                    "Tuân thủ quy định bảo mật y tế, mã hóa dữ liệu, phân quyền truy cập chi tiết.",
-                                icon: Shield,
+                                    "Tối ưu hóa tài nguyên, giảm chi phí vận hành, tăng năng suất làm việc.",
+                                icon: TrendingUp,
                             },
-                            {
-                                label: "Báo cáo & thống kê",
-                                description:
-                                    "Dashboard tổng quan, báo cáo doanh thu, thống kê bệnh nhân, hiệu suất hoạt động.",
-                                icon: BarChart2,
-                            },
-                            {
-                                label: "Ứng dụng di động",
-                                description:
-                                    "App cho bệnh nhân đặt lịch, xem kết quả. App cho bác sĩ truy cập hồ sơ mọi lúc.",
-                                icon: Smartphone,
-                            }
                         ].map((item, index) => {
                             const Icon = item.icon;
                             return (
@@ -161,7 +135,7 @@ const QuanLyPhongKhamPage = () => {
                                                 <Icon className="w-8 h-8" />
                                             </div>
                                             <div className="tracking-tight text-lg font-semibold">
-                                                {item.label}
+                                                {item.title}
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +148,85 @@ const QuanLyPhongKhamPage = () => {
                     </div>
                 </div>
             </section>
-
+            {/* Tại sao cần website chuyên nghiệp */}
+            <section className="py-16">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
+                            Tính Năng Nổi Bật
+                        </h2>
+                        <p className="text-lg text-center max-w-3xl mx-auto">
+                            Hệ thống ERP toàn diện cho doanh nghiệp hiện đại
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {[
+                            {
+                                title: "Quản lý tài chính",
+                                description:
+                                    "Kế toán tổng hợp, quản lý ngân quỹ, báo cáo tài chính, thuế và tuân thủ.",
+                                icon: Wallet,
+                            },
+                            {
+                                title: "Quản lý nhân sự",
+                                description:
+                                    "HR, chấm công, tính lương, đánh giá hiệu suất, đào tạo và phát triển.",
+                                icon: Users,
+                            },
+                            {
+                                title: "Quản lý kho hàng",
+                                description:
+                                    "Nhập xuất tồn, theo dõi lô hàng, cảnh báo hết hàng, tối ưu inventory.",
+                                icon: Warehouse,
+                            },
+                            {
+                                title: "Quản lý sản xuất",
+                                description:
+                                    "Lập kế hoạch sản xuất, theo dõi tiến độ, quản lý chất lượng, máy móc thiết bị.",
+                                icon: Factory,
+                            },
+                            {
+                                title: "Quản lý bán hàng",
+                                description:
+                                    "CRM tích hợp, quản lý đơn hàng, báo giá, hợp đồng và chăm sóc khách hàng.",
+                                icon: ShoppingCart,
+                            },
+                            {
+                                title: "Business Intelligence",
+                                description:
+                                    "Dashboard tổng quan, báo cáo phân tích, dự báo xu hướng, hỗ trợ quyết định.",
+                                icon: BarChart4,
+                            },
+                        ].map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <motion.div
+                                    key={index}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                                    viewport={{ once: true }}
+                                    className="rounded-lg hover:border-white border border-white/10 text-card-foreground shadow-sm h-full transition-all duration-300"
+                                >
+                                    <div className="flex flex-col space-y-1.5 p-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                                                <Icon className="w-8 h-8" />
+                                            </div>
+                                            <div className="tracking-tight text-lg font-semibold">
+                                                {item.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="p-4 pt-0">
+                                        <p>{item.description}</p>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
             <section className="py-16 px-4 sm:px-6 lg:px-8 container mx-auto">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -185,7 +237,7 @@ const QuanLyPhongKhamPage = () => {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            Giải pháp phù hợp cho mọi loại hình spa
+                            Giải pháp ERP theo ngành nghề
                         </motion.h2>
                         <motion.p
                             className="text-lg text-white max-w-3xl mx-auto"
@@ -194,57 +246,60 @@ const QuanLyPhongKhamPage = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             viewport={{ once: true }}
                         >
-                            Chúng tôi cung cấp giải pháp website spa tùy chỉnh phù hợp với đặc thù của từng loại hình dịch vụ
+                            Tùy chỉnh theo đặc thù và quy mô của từng loại hình doanh nghiệp
                         </motion.p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {[
                             {
                                 id: 1,
-                                title: "Phòng khám nhỏ & vừa",
-                                description: "Giải pháp tối ưu cho phòng khám nhỏ và vừa với đầy đủ tính năng cần thiết",
-                                icon: Hospital,
+                                title: "ERP Sản Xuất",
+                                description: "Tối ưu quy trình từ lập kế hoạch đến chất lượng sản phẩm.",
+                                icon: Factory,
                                 features: [
-                                    "Quản lý lịch hẹn",
-                                    "Hồ sơ bệnh án điện tử",
-                                    "Kê đơn thuốc",
-                                    "Thanh toán & hóa đơn",
+                                    "Lập kế hoạch sản xuất",
+                                    "Quản lý BOM",
+                                    "Theo dõi tiến độ",
+                                    "Quản lý chất lượng",
                                 ],
                             },
+
                             {
                                 id: 2,
-                                title: "Bệnh Viện Đa Khoa",
-                                description: "Hệ thống toàn diện cho bệnh viện lớn với nhiều khoa phòng chuyên biệt",
-                                icon: Activity,
+                                title: "ERP Bán Lẻ",
+                                description: "Tối ưu cho chuỗi cửa hàng bán lẻ và thương mại.",
+                                icon: ShoppingBag,
                                 features: [
-                                    "Quản lý nhiều khoa",
-                                    "Hệ thống giường bệnh",
-                                    "Quản lý phẫu thuật",
-                                    "Báo cáo tổng hợp",
+                                    "POS tích hợp",
+                                    "Quản lý chuỗi cửa hàng",
+                                    "Loyalty program",
+                                    "Phân tích bán hàng",
                                 ],
                             },
+
                             {
                                 id: 3,
-                                title: "Phòng Khám Nha Khoa",
-                                description: "Chuyên biệt cho phòng khám nha khoa với tính năng đặc thù",
-                                icon: Heart,
+                                title: "ERP Dịch Vụ",
+                                description: "Dành cho doanh nghiệp cung cấp dịch vụ và tư vấn.",
+                                icon: Briefcase,
                                 features: [
-                                    "Sơ đồ răng điện tử",
-                                    "Lịch điều trị",
-                                    "Hình ảnh X-quang",
-                                    "Báo giá điều trị",
+                                    "Quản lý dự án",
+                                    "Time tracking",
+                                    "Resource planning",
+                                    "Billing & invoicing",
                                 ],
                             },
+
                             {
                                 id: 4,
-                                title: "Phòng Xét Nghiệm",
-                                description: "Quản lý chuyên sâu cho phòng xét nghiệm và chẩn đoán hình ảnh",
-                                icon: FlaskConical,
+                                title: "ERP Xây Dựng",
+                                description: "Chuyên biệt cho ngành xây dựng và hạ tầng.",
+                                icon: Building2,
                                 features: [
-                                    "Quản lý mẫu xét nghiệm",
-                                    "Kết quả tự động",
-                                    "Chất lượng kiểm soát",
-                                    "Báo cáo chuyên sâu",
+                                    "Quản lý công trình",
+                                    "Theo dõi tiến độ",
+                                    "Quản lý vật tư",
+                                    "Cost control",
                                 ],
                             },
                         ].map((service, index) => (
@@ -287,86 +342,6 @@ const QuanLyPhongKhamPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Tại sao cần website chuyên nghiệp */}
-            <section className="py-16">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-2xl text-center font-bold md:text-4xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text not-italic text-transparent">
-                            Tính Năng Nổi Bật
-                        </h2>
-                        <p className="text-lg text-center max-w-3xl mx-auto">
-                            Giải pháp toàn diện cho cơ sở y tế hiện đại
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        {[
-                            {
-                                label: "Quản lý bệnh nhân",
-                                description:
-                                    "Hồ sơ bệnh nhân chi tiết, lịch sử khám bệnh, thông tin liên hệ, bảo hiểm y tế.",
-                                icon: Users,
-                            },
-                            {
-                                label: "Quản lý bác sĩ & nhân viên",
-                                description:
-                                    "Lịch làm việc, chuyên khoa, thông tin liên hệ, đánh giá hiệu suất làm việc.",
-                                icon: UserCheck,
-                            },
-                            {
-                                label: "Kê đơn thuốc điện tử",
-                                description:
-                                    "Kê đơn thuốc số, kiểm tra tương tác thuốc, quản lý kho thuốc, cảnh báo hết hạn.",
-                                icon: FileText,
-                            },
-                            {
-                                label: "Xét nghiệm & chẩn đoán",
-                                description:
-                                    "Quản lý kết quả xét nghiệm, hình ảnh y khoa, báo cáo chẩn đoán, theo dõi chỉ số.",
-                                icon: Activity,
-                            },
-                            {
-                                label: "Báo cáo & thống kê",
-                                description:
-                                    "Dashboard tổng quan, báo cáo doanh thu, thống kê bệnh nhân, hiệu suất hoạt động.",
-                                icon: BarChart2,
-                            },
-                            {
-                                label: "Ứng dụng di động",
-                                description:
-                                    "App cho bệnh nhân đặt lịch, xem kết quả. App cho bác sĩ truy cập hồ sơ mọi lúc.",
-                                icon: Smartphone,
-                            },
-                        ].map((item, index) => {
-                            const Icon = item.icon;
-                            return (
-                                <motion.div
-                                    key={index}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                                    viewport={{ once: true }}
-                                    className="rounded-lg hover:border-white border border-white/10 text-card-foreground shadow-sm h-full transition-all duration-300"
-                                >
-                                    <div className="flex flex-col space-y-1.5 p-4">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-full flex items-center justify-center">
-                                                <Icon className="w-8 h-8" />
-                                            </div>
-                                            <div className="tracking-tight text-lg font-semibold">
-                                                {item.label}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-4 pt-0">
-                                        <p>{item.description}</p>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
             {/* Câu hỏi thường gặp */}
             <section className="py-16">
                 <div className="container mx-auto px-4">
@@ -375,60 +350,60 @@ const QuanLyPhongKhamPage = () => {
                             Câu hỏi thường gặp
                         </h2>
                         <p className="text-lg text-center max-w-3xl mx-auto">
-                            CRM là gì và tại sao doanh nghiệp cần quản lý khách hàng?
+                            Hãy để chúng tôi giúp bạn xây dựng landing page chuyên nghiệp, thu hút khách hàng và tăng tỷ lệ chuyển đổi.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                             {
-                                question: "Hệ thống quản lý phòng khám là gì?",
+                                question: "ERP là gì và tại sao doanh nghiệp cần ERP?",
                                 answer:
-                                    "Hệ thống quản lý phòng khám (Clinic Management System) là phần mềm giúp tự động hóa quy trình quản lý bệnh nhân, lịch hẹn, hồ sơ bệnh án, kê đơn thuốc, thanh toán và báo cáo thống kê. Giúp tối ưu hóa vận hành phòng khám.",
+                                    "ERP (Enterprise Resource Planning) là hệ thống quản trị tổng thể doanh nghiệp giúp kết nối dữ liệu giữa các phòng ban, tự động hóa quy trình và nâng cao hiệu quả vận hành. ERP giúp doanh nghiệp giảm sai sót, tiết kiệm chi phí và tối ưu ra quyết định.",
                             },
                             {
-                                question: "Làm thế nào để quản lý hồ sơ bệnh án hiệu quả?",
+                                question: "ERP phù hợp cho doanh nghiệp ở quy mô nào?",
                                 answer:
-                                    "Phòng khám nên sử dụng hồ sơ bệnh án điện tử để lưu trữ đầy đủ thông tin bệnh nhân, lịch sử khám chữa bệnh, đơn thuốc và kết quả xét nghiệm. Dữ liệu được truy xuất nhanh chóng và bảo mật.",
+                                    "ERP phù hợp cho mọi quy mô doanh nghiệp: từ SME đến tập đoàn lớn. Với doanh nghiệp nhỏ, ERP giúp chuẩn hóa quy trình; với doanh nghiệp lớn, ERP giúp đồng bộ dữ liệu và tối ưu vận hành toàn hệ thống.",
                             },
                             {
-                                question: "Hệ thống có hỗ trợ đặt lịch khám trực tuyến không?",
+                                question: "Thời gian triển khai ERP mất bao lâu?",
                                 answer:
-                                    "Có, hầu hết hệ thống quản lý phòng khám hiện đại đều tích hợp tính năng đặt lịch khám trực tuyến, nhắc hẹn tự động và tránh trùng lịch bác sĩ.",
+                                    "Thời gian triển khai ERP phụ thuộc vào phạm vi dự án và số module cần triển khai. Thông thường từ 1–6 tháng. Doanh nghiệp nhỏ có thể triển khai trong 4–8 tuần, còn hệ thống lớn có thể cần nhiều giai đoạn.",
                             },
                             {
-                                question: "Làm sao để quản lý lịch làm việc của bác sĩ và nhân viên?",
+                                question: "Chi phí triển khai ERP gồm những gì?",
                                 answer:
-                                    "Hệ thống cho phép lập lịch làm việc, phân công nhiệm vụ, theo dõi ca trực của bác sĩ và nhân viên, giúp tối ưu hóa hiệu suất làm việc và tránh trùng lịch.",
+                                    "Chi phí ERP bao gồm: phí bản quyền phần mềm (hoặc thuê bao cloud), chi phí triển khai, tuỳ chỉnh theo quy trình doanh nghiệp, đào tạo nhân sự và chi phí bảo trì sau triển khai. Mỗi doanh nghiệp sẽ có báo giá riêng dựa trên nhu cầu thực tế.",
                             },
                             {
-                                question: "Có thể kê đơn thuốc điện tử và quản lý kho thuốc không?",
+                                question: "ERP có cần tùy chỉnh theo doanh nghiệp không?",
                                 answer:
-                                    "Có, phần mềm cho phép kê đơn điện tử, kiểm tra tương tác thuốc, quản lý tồn kho và cảnh báo thuốc sắp hết hạn, đảm bảo an toàn cho bệnh nhân và thuận tiện cho nhà thuốc.",
+                                    "Có. ERP có thể tùy chỉnh theo quy trình đặc thù của từng doanh nghiệp. Tuy nhiên, hạn chế tối đa việc tùy chỉnh quá nhiều để tránh khó khăn trong bảo trì và nâng cấp sau này.",
                             },
                             {
-                                question: "Hệ thống có hỗ trợ quản lý xét nghiệm và kết quả chẩn đoán không?",
+                                question: "ERP có thể tích hợp với hệ thống khác không?",
                                 answer:
-                                    "Có, các kết quả xét nghiệm và hình ảnh y khoa được lưu trữ trực tuyến, cho phép theo dõi chỉ số sức khỏe và báo cáo chẩn đoán nhanh chóng.",
+                                    "Có. ERP có thể tích hợp với CRM, POS, phần mềm kế toán, hệ thống nhân sự, eCommerce, phần mềm kho vận, và nhiều nền tảng khác thông qua API hoặc tích hợp tiêu chuẩn.",
                             },
                             {
-                                question: "Báo cáo và thống kê của phòng khám được cung cấp như thế nào?",
+                                question: "Nhân viên có khó sử dụng ERP không?",
                                 answer:
-                                    "Hệ thống cung cấp dashboard trực quan, báo cáo doanh thu, số lượng bệnh nhân, hiệu suất bác sĩ và các chỉ số quan trọng khác, hỗ trợ ra quyết định nhanh chóng.",
+                                    "Không. Giao diện ERP hiện đại thân thiện và dễ sử dụng. Ngoài ra, nhân viên sẽ được đào tạo trực tiếp hoặc online. Sau 1–2 tuần, hầu hết đều thích ứng tốt với hệ thống.",
                             },
                             {
-                                question: "Có thể truy cập hệ thống trên di động không?",
+                                question: "ERP có giúp tăng năng suất và giảm chi phí không?",
                                 answer:
-                                    "Có, nhiều hệ thống quản lý phòng khám hiện đại có ứng dụng mobile, giúp bác sĩ và nhân viên truy cập thông tin bệnh nhân, quản lý công việc mọi lúc, mọi nơi.",
+                                    "Có. ERP giúp tự động hóa quy trình, giảm thao tác thủ công, loại bỏ nhập liệu trùng lặp và giảm lỗi. Điều này giúp doanh nghiệp tiết kiệm từ 20–40% chi phí vận hành mỗi năm.",
                             },
                             {
-                                question: "Hệ thống có đảm bảo bảo mật thông tin bệnh nhân không?",
+                                question: "Dữ liệu khi dùng ERP có an toàn không?",
                                 answer:
-                                    "Có, các hệ thống quản lý phòng khám tuân thủ quy định bảo mật y tế, mã hóa dữ liệu, phân quyền truy cập và lưu trữ an toàn thông tin bệnh nhân.",
+                                    "Dữ liệu được mã hóa, phân quyền chi tiết và sao lưu định kỳ. Với ERP cloud, hệ thống còn được bảo vệ bởi các tiêu chuẩn bảo mật quốc tế như ISO 27001 hoặc SOC 2.",
                             },
                             {
-                                question: "Hệ thống có thể tích hợp với các phần mềm hiện tại không?",
+                                question: "Doanh nghiệp cần chuẩn bị gì trước khi triển khai ERP?",
                                 answer:
-                                    "Có, hệ thống có thể tích hợp với phần mềm quản lý bệnh viện, ERP, kế toán hoặc các công cụ khác qua API, đảm bảo dữ liệu đồng bộ và quy trình liền mạch.",
+                                    "Doanh nghiệp cần xác định mục tiêu triển khai, chuẩn hóa quy trình, chuẩn bị dữ liệu đầu vào và bố trí team triển khai nội bộ. Sự phối hợp chặt chẽ giữa doanh nghiệp và đối tác ERP quyết định phần lớn kết quả triển khai.",
                             },
                         ].map((data, index) => (
                             <div
@@ -454,10 +429,10 @@ const QuanLyPhongKhamPage = () => {
                             className="p-8 md:p-12 rounded-2xl shadow-lg border-t-4 border-white"
                         >
                             <h2 className="text-2xl font-bold md:text-4xl mb-2 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent not-italic">
-                                Sẵn Sàng Số Hóa Cơ Sở Y Tế?
+                                Sẵn Sàng Tích Hợp Hệ Thống ERP?
                             </h2>
                             <p className="text-lg mb-8 mx-auto">
-                                Liên hệ ngay để nhận tư vấn miễn phí và demo hệ thống CLS
+                                Liên hệ ngay để nhận tư vấn miễn phí và demo hệ thống ERP
                             </p>
                             <div className="inline-block mt-6">
                                 <Link href="/contact">
@@ -480,7 +455,7 @@ const QuanLyPhongKhamPage = () => {
                 </div>
             </section>
         </div>
-    );
-};
+    )
+}
 
-export default QuanLyPhongKhamPage;
+export default QuanLyDoanhNghiepPage

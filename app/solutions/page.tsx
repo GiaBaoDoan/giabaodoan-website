@@ -157,10 +157,10 @@ const data = [
     ],
   },
   {
-    href: "/solutions/giap-phap-ai",
+    href: "/solutions/ung-dung-ai",
     icon: <Cpu className="w-6 h-6" />,
     title: "AI & Machine Learning",
-    status: "popular",
+    status: "new",
     desc: "Giải pháp AI/ML với Python, TensorFlow và cloud ML services",
     features: [
       "Predictive analytics",

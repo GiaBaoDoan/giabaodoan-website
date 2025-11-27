@@ -8,14 +8,7 @@ import {
     Users,
     Check,
     BarChart2,
-    Shield,
-    FileText,
     CalendarCheck,
-    Activity,
-    UserCheck,
-    FlaskConical,
-    Hospital,
-    Heart,
     User,
     CreditCard,
     Bell,
@@ -185,7 +178,7 @@ const UngDungMobilePage = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <motion.h2
-                            className="text-3xl font-bold md:text-5xl mb-4 bg-gradient-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent"
+                            className="text-3xl font-bold md:text-5xl mb-4 bg-linear-to-b from-yellow-100 to-yellow-500 bg-clip-text text-transparent"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
@@ -427,7 +420,7 @@ const UngDungMobilePage = () => {
                                     "Thông thường, các app hiện đại được phát triển cross-platform hoặc native, có thể chạy trên cả iOS và Android để phục vụ đa dạng khách hàng.",
                             },
                             {
-                                question: "Chi phí phát triển ứng dụng di động là bao nhiêu?",
+                                questjion: "Chi phí phát triển ứng dụng di động là bao nhiêu?",
                                 answer:
                                     "Chi phí phụ thuộc vào loại app, số lượng tính năng, mức độ phức tạp, nền tảng phát triển và UI/UX. Một app cơ bản có thể từ vài nghìn đến hàng chục nghìn USD.",
                             },
